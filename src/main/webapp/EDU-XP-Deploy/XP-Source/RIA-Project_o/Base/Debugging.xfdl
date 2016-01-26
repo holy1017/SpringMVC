@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.3">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Debugging" classname="Debugging" inheritanceid="" position="absolute 0 0 800 600" titletext="New Form">
+    <Layout>
+      <Button id="Button00" taborder="0" text="alert" position2="absolute l:35 w:107 t:32 h:48" positiontype="position2" onclick="Button00_onclick"/>
+      <Button id="Button01" taborder="1" text="trace" position2="absolute l:173 w:107 t:32 h:48" positiontype="position2" onclick="Button01_onclick"/>
+      <Button id="Button02" taborder="2" text="line debugging" position2="absolute l:309 w:139 t:32 h:48" positiontype="position2" onclick="Button02_onclick"/>
+    </Layout>
+    <Script type="xscript4.0"><![CDATA[
+function Button00_onclick(obj:Button,  e:ClickEventInfo)
+{
+	var sTest="alert의 사용";
+
+	alert(sTest);
+}
+
+function Button01_onclick(obj:Button,  e:ClickEventInfo)
+{
+	var sTest="trace의 사용";
+	
+	trace(sTest);
+}
+
+function Button02_onclick(obj:Button,  e:ClickEventInfo)
+{
+	var iTest=0;
+	
+	iTest=iTest+1;
+	iTest=iTest+1;
+	iTest=iTest+1;
+	
+	var iRtn=fn_debug(iTest);
+	
+	iTest=iRtn+1;
+	iTest=iTest+1;
+	
+}
+
+function fn_debug(i)
+{
+	i=i*10
+	
+	return i;
+}
+]]></Script>
+  </Form>
+</FDL>

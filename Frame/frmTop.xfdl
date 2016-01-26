@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.4">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="frmTop" classname="frmTop" inheritanceid="" position="absolute 0 0 1024 768" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Menu id="Menu00" taborder="0" position2="absolute l:8 w:685 t:8 h:25" positiontype="position2" innerdataset="@gds_menu" captioncolumn="menu_nm" idcolumn="menu_id" levelcolumn="menu_lv" onmenuclick="Menu00_onmenuclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript4.0"><![CDATA[
+function Menu00_onmenuclick(obj:Menu, e:MenuClickEventInfo)
+{
+	var sID=e.id;
+	var sURL=gds_menu.lookup("menu_id",sID,"menu_url");
+	var sTitle=gds_menu.lookup("menu_id",sID,"menu_nm");
+	
+	if(sURL.length<1)
+	{
+		return;
+	}
+	
+	gfn_Open(sID,sURL,sTitle);
+}
+
+]]></Script>
+  </Form>
+</FDL>

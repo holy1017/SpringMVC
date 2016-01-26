@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GlobalVariables>
+  <Images>
+    <Image id="doughnut" url="Images\doughnut.png"/>
+    <Image id="icecream" url="Images\icecream.png"/>
+  </Images>
+  <Dataset id="gds_menu">
+    <ColumnInfo>
+      <Column id="menu_id" size="256" type="STRING"/>
+      <Column id="menu_nm" size="256" type="STRING"/>
+      <Column id="menu_lv" size="256" type="STRING"/>
+      <Column id="menu_st" size="256" type="STRING"/>
+      <Column id="form_url" size="256" type="STRING"/>
+    </ColumnInfo>
+    <Rows>
+      <Row>
+        <Col id="menu_id">1</Col>
+        <Col id="menu_nm">RootMenu1</Col>
+        <Col id="menu_lv">0</Col>
+        <Col id="menu_st">1</Col>
+        <Col id="form_url"/>
+      </Row>
+      <Row>
+        <Col id="menu_id">2</Col>
+        <Col id="menu_nm">SubMenu1</Col>
+        <Col id="menu_lv">1</Col>
+        <Col id="menu_st">1</Col>
+        <Col id="form_url"/>
+      </Row>
+      <Row>
+        <Col id="menu_id">3</Col>
+        <Col id="menu_nm">Employees</Col>
+        <Col id="menu_lv">2</Col>
+        <Col id="menu_st">1</Col>
+        <Col id="form_url">Base::Employees.xfdl</Col>
+      </Row>
+      <Row>
+        <Col id="menu_id">5</Col>
+        <Col id="menu_nm">SubMenu2</Col>
+        <Col id="menu_lv">1</Col>
+        <Col id="menu_st">1</Col>
+        <Col id="form_url"/>
+      </Row>
+      <Row>
+        <Col id="menu_id">6</Col>
+        <Col id="menu_nm">Hello</Col>
+        <Col id="menu_lv">2</Col>
+        <Col id="menu_st">1</Col>
+        <Col id="form_url">Base::Hello.xfdl</Col>
+      </Row>
+      <Row>
+        <Col id="menu_id">7</Col>
+        <Col id="menu_nm">RootMenu2</Col>
+        <Col id="menu_lv">0</Col>
+        <Col id="menu_st">1</Col>
+        <Col id="form_url"/>
+      </Row>
+    </Rows>
+  </Dataset>
+</GlobalVariables>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.4">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="debugging" classname="debugging" inheritanceid="" position="absolute 0 0 1024 768" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Button id="Button00" taborder="0" text="alert" position2="absolute l:9 w:120 t:8 h:50" positiontype="position2" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="1" text="trace" position2="absolute l:136 w:120 t:8 h:50" positiontype="position2" onclick="Button01_onclick"/>
+        <Button id="Button02" taborder="1" text="debugging" position2="absolute l:263 w:120 t:8 h:50" positiontype="position2" onclick="Button02_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript4.0"><![CDATA[
+function Button00_onclick(obj:Button,  e:ClickEventInfo)
+{
+	var sNAme="alert";
+	
+	alert(sName);
+}
+
+function Button01_onclick(obj:Button,  e:ClickEventInfo)
+{
+	var sNAme1="trace";
+	
+	trace(sName1);
+}
+
+function Button02_onclick(obj:Button,  e:ClickEventInfo)
+{
+	var i=0;
+	
+	i=i+1;
+	i=i+11;
+	i=i+111;
+	i=i+1;
+	i=i+11;
+	i=i+1;
+	i=i+111;
+	
+}
+]]></Script>
+  </Form>
+</FDL>

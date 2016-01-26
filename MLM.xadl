@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="1.1">
+  <TypeDefinition url="default_typedef.xml"/>
+  <GlobalVariables url="globalvars.xml"/>
+  <Application id="MLM" codepage="utf-8" language="Korean" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="">
+    <Layout>
+      <MainFrame id="mainframe" title="maintitle" defaultfont="" resizable="true" showtitlebar="true" showstatusbar="true" position="absolute 0 0 800 800">
+        <ChildFrame id="childframe" formurl="" showtitlebar="false" showstatusbar="false" openeffect="" closeeffect=""/>
+      </MainFrame>
+    </Layout>
+    <ScreenInfo>
+      <Screen name="Screen0" theme="AjaxBlue.xtheme"/>
+      <Screen name="Screen1" theme="AjaxGreen.xtheme"/>
+    </ScreenInfo>
+  </Application>
+</ADL>

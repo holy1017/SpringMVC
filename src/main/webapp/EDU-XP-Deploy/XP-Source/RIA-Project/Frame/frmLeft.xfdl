@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.3">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="frmLeft" classname="frmLeft" inheritanceid="" position="absolute 0 0 1024 768" titletext="New Form">
+    <Layout>
+      <Grid id="Grid00" taborder="0" useinputpanel="false" position2="absolute l:8 w:184 t:8 h:409" positiontype="position2" binddataset="gds_menu" formats="&lt;Formats&gt;&#10;  &lt;Format id=&quot;default&quot;&gt;&#10;    &lt;Columns&gt;&#10;      &lt;Col size=&quot;80&quot;/&gt;&#10;      &lt;Col size=&quot;80&quot;/&gt;&#10;      &lt;Col size=&quot;80&quot;/&gt;&#10;      &lt;Col size=&quot;80&quot;/&gt;&#10;      &lt;Col size=&quot;80&quot;/&gt;&#10;    &lt;/Columns&gt;&#10;    &lt;Rows&gt;&#10;      &lt;Row band=&quot;head&quot; size=&quot;24&quot;/&gt;&#10;      &lt;Row band=&quot;body&quot; size=&quot;24&quot;/&gt;&#10;    &lt;/Rows&gt;&#10;    &lt;Band id=&quot;head&quot;&gt;&#10;      &lt;Cell col=&quot;0&quot; disptype=&quot;normal&quot; text=&quot;menu_id&quot;/&gt;&#10;      &lt;Cell col=&quot;1&quot; disptype=&quot;normal&quot; text=&quot;menu_nm&quot;/&gt;&#10;      &lt;Cell col=&quot;2&quot; disptype=&quot;normal&quot; text=&quot;menu_lv&quot;/&gt;&#10;      &lt;Cell col=&quot;3&quot; disptype=&quot;normal&quot; text=&quot;menu_st&quot;/&gt;&#10;      &lt;Cell col=&quot;4&quot; disptype=&quot;normal&quot; text=&quot;menu_url&quot;/&gt;&#10;    &lt;/Band&gt;&#10;    &lt;Band id=&quot;body&quot;&gt;&#10;      &lt;Cell col=&quot;0&quot; disptype=&quot;normal&quot; text=&quot;bind:menu_id&quot;/&gt;&#10;      &lt;Cell col=&quot;1&quot; disptype=&quot;normal&quot; text=&quot;bind:menu_nm&quot;/&gt;&#10;      &lt;Cell col=&quot;2&quot; disptype=&quot;normal&quot; text=&quot;bind:menu_lv&quot;/&gt;&#10;      &lt;Cell col=&quot;3&quot; disptype=&quot;normal&quot; text=&quot;bind:menu_st&quot;/&gt;&#10;      &lt;Cell col=&quot;4&quot; disptype=&quot;normal&quot; text=&quot;bind:menu_url&quot;/&gt;&#10;    &lt;/Band&gt;&#10;  &lt;/Format&gt;&#10;&lt;/Formats&gt;&#10;" treeusecheckbox="false" style="linetype:onlyvert;font:Verdana,9,antialias;" autofittype="col" treeinitstatus="expand,all" oncelldblclick="Grid00_oncelldblclick">
+        <Formats>
+          <Format id="default">
+            <Columns>
+              <Column size="164"/>
+            </Columns>
+            <Rows>
+              <Row size="24"/>
+            </Rows>
+            <Band id="body">
+              <Cell displaytype="tree" edittype="tree" style="background:transparent;background2:transparent;" text="bind:menu_nm" treelevel="bind:menu_lv" treestate="bind:menu_st"/>
+            </Band>
+          </Format>
+        </Formats>
+      </Grid>
+    </Layout>
+    <Script type="xscript4.0"><![CDATA[
+function Grid00_oncelldblclick(obj:Grid, e:GridClickEventInfo)
+{
+	var sID   = gds_menu.getColumn(e.row, "menu_id");
+	var sURL  = gds_menu.getColumn(e.row, "menu_url");
+	var sTitle= gds_menu.getColumn(e.row, "menu_nm");
+	
+	if(sURL.length < 1)
+	{
+		return;
+	}
+	
+	gfn_Open(sID, sURL, sTitle);
+}
+]]></Script>
+  </Form>
+</FDL>

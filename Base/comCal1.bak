@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.4">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="comCal1" classname="comCal1" inheritanceid="" position="absolute 0 0 400 100" titletext="New Form" onload="comCal1_onload">
+    <Layouts>
+      <Layout>
+        <Calendar id="Calendar00" taborder="0" position2="absolute l:8 w:166 t:8 h:20" positiontype="position2"/>
+        <Calendar id="Calendar01" taborder="1" position2="absolute l:232 w:166 t:8 h:20" positiontype="position2"/>
+        <Static id="Static00" text="=" position2="absolute l:192 w:16 t:10 h:18" positiontype="position2"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript4.0"><![CDATA[
+function comCal1_onload(obj:Form, e:LoadEventInfo)
+{
+	
+	var objDate1 = new Date();
+	objDate1.setDate;
+	var data1=objDate1.toFormatString("%Y%m%d");
+	trace(data1);
+	
+	Calendar00.value=data1;
+	Calendar01.value=data1;
+}
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="1.0">
+  <TypeDefinition url="default_typedef.xml"/>
+  <GlobalVariables url="globalvars.xml"/>
+  <Application id="SDI" codepage="utf-8" language="Korean" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="" themeid="default.xtheme" engineurl="http://localhost:8080/EDU-XP-Deploy/XP-Module/XPLATFORM9.2_SetupEngine.exe" enginesetupkey="{0239FCE5-88CF-48e9-912D-90DAFC25E38B}" licenseurl="http://localhost:8080/EDU-XP-Deploy/XPLATFORM_Client_License.xml" engineversion="9.2.0.11">
+    <Layout>
+      <MainFrame id="mainframe" title="maintitle" defaultfont="" resizable="true" showtitlebar="true" showstatusbar="true" position="absolute 0 0 1024 768">
+        <ChildFrame id="childframe" formurl="Base::Employees.xfdl" showtitlebar="false" showstatusbar="false" openeffect="" closeeffect=""/>
+      </MainFrame>
+    </Layout>
+    <ScreenInfo/>
+  </Application>
+</ADL>

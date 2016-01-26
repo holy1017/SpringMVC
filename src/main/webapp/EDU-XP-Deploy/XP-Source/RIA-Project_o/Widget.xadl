@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="1.0">
+  <TypeDefinition url="default_typedef.xml"/>
+  <GlobalVariables url="globalvars.xml"/>
+  <Application id="Widget" codepage="utf-8" language="Korean" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="" themeid="default.xtheme">
+    <Layout>
+      <Widget id="Widget0" formurl="Base::Widget0.xfdl" backgroundimage="doughnut" topmost="true"/>
+      <Widget id="Widget1" formurl="Base::Widget1.xfdl" backgroundimage="icecream" visible="false"/>
+    </Layout>
+    <ScreenInfo/>
+  </Application>
+</ADL>

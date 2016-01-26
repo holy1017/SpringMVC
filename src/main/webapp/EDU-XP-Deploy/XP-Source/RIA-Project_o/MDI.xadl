@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="1.0">
+  <TypeDefinition url="default_typedef.xml"/>
+  <GlobalVariables url="globalvars.xml"/>
+  <Application id="MDI" codepage="utf-8" language="Korean" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="append" themeid="default.xtheme" engineurl="http://localhost:8080/EDU-XP-Deploy/XP-Module/XPLATFORM9.2_SetupEngine.exe" enginesetupkey="{0239FCE5-88CF-48e9-912D-90DAFC25E38B}" licenseurl="http://localhost:8080/EDU-XP-Deploy/XPLATFORM_Client_License.xml" engineversion="9.2.0.11" loglevel="fatal">
+    <Layout>
+      <MainFrame id="mainframe" title="maintitle" defaultfont="" resizable="true" showtitlebar="true" showstatusbar="true" position="absolute 0 0 1024 768">
+        <VFrameSet id="VFrameSet0" separatesize="100,*">
+          <Frames>
+            <ChildFrame id="ChildFrame0" showtitlebar="false" style="background:blue;" formurl="Frame::frmTop.xfdl"/>
+            <HFrameSet id="HFrameSet0" separatesize="200,*">
+              <Frames>
+                <ChildFrame id="ChildFrame0" style="background:yellow;" showtitlebar="false" formurl="Frame::frmLeft.xfdl"/>
+                <FrameSet id="FrameSet0"/>
+              </Frames>
+            </HFrameSet>
+          </Frames>
+        </VFrameSet>
+      </MainFrame>
+    </Layout>
+    <ScreenInfo/>
+  </Application>
+  <Script type="xscript4.0"><![CDATA[function gfn_OpenForm(strUrl,strTitle)
+{
+	var objFrameSet = application.mainframe.VFrameSet0.HFrameSet0.FrameSet0;
+	
+	var objChildFrame = new ChildFrame("tmp_chf",10,10,810,610);
+	objChildFrame.formurl = strUrl;
+	objChildFrame.titletext = strTitle;
+	
+	var strChildID = "chf_"+objFrameSet.frames.length;
+	
+	objFrameSet.addChild(strChildID, objChildFrame);
+		
+	objChildFrame.show();
+}
+]]></Script>
+</ADL>

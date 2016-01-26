@@ -1,0 +1,51 @@
+﻿
+
+Static
+{
+
+	background	: coral ;
+	blur	: 0 ;
+	border : 1 solid brown ;
+
+	glow	: 10 aqua ;
+	gradation : radial 10,10 yellowgreen 100,100 black ;
+
+}
+
+Static:mouseover
+{
+
+	background	: orange ;
+
+}
+
+Div
+{
+
+}
+
+Div>Static
+{
+
+	background	: #ecececff;
+
+}
+
+Static.val_chk
+{
+
+	background	: gold ;
+
+	color	: crimson ;
+
+}
+
+#st_title
+{
+	font : ,22,bold italic ;
+}
+
+MaskEdit[type="number"]
+{
+	align	: middle ;
+}

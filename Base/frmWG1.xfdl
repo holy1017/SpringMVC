@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.4">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="frmWG1" classname="frmWG1" inheritanceid="" position="absolute 0 0 1024 768" titletext="New Form" style="background:transparent;border:0 double #ccccccff white;">
+    <Layouts>
+      <Layout>
+        <Button id="Button00" taborder="0" text="종료" position2="absolute l:248 w:120 t:128 h:50" positiontype="position2" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="1" text="보이기" position2="absolute l:218 w:120 t:227 h:50" positiontype="position2" onclick="Button01_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript4.0"><![CDATA[
+function Button00_onclick(obj:Button,  e:ClickEventInfo)
+{
+	exit();
+}
+
+function Button01_onclick(obj:Button,  e:ClickEventInfo)
+{
+	Widget1.visible=true;
+}
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.3">
+  <TypeDefinition url="..\..\default_typedef.xml"/>
+  <Form id="frmMaster" classname="frmMaster" inheritanceid="" position="absolute 0 0 1024 768" titletext="New Form">
+    <Layout>
+      <Static id="st_title" text="Employees" position2="absolute l:11 w:209 t:13 h:34" positiontype="position2" style="background:#dbdbdbff;"/>
+      <Button id="Button00" taborder="1" text="Retrieve" onclick="fn_retrieve" position2="absolute l:228 w:100 t:13 h:35" positiontype="position2"/>
+      <Button id="Button01" taborder="2" text="Add" onclick="fn_add" position2="absolute l:334 w:100 t:13 h:35" positiontype="position2"/>
+      <Button id="Button02" taborder="3" text="Delete" onclick="fn_delete" position2="absolute l:439 w:100 t:13 h:35" positiontype="position2"/>
+      <Button id="Button03" taborder="4" text="Save" onclick="fn_save" position2="absolute l:544 w:100 t:13 h:35" positiontype="position2"/>
+    </Layout>
+  </Form>
+</FDL>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="1.1">
+  <TypeDefinition url="default_typedef.xml"/>
+  <GlobalVariables url="globalvars.xml"/>
+  <Application id="MDI" codepage="utf-8" language="Korean" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="" themeid="default.xtheme" enginesetupkey="{0239FCE5-88CF-48e9-912D-90DAFC25E38B}" engineurl="http://localhost:8080/EDU-XP-Deploy/XP-Module/XPLATFORM9.2_SetupEngine.exe" engineversion="9.2.0.11" licenseurl="http://localhost:8080/EDU-XP-Deploy/XPLATFORM_Client_License.xml">
+    <Layout>
+      <MainFrame id="mainframe" title="maintitle" defaultfont="" resizable="true" showtitlebar="true" showstatusbar="true" position="absolute 0 0 1024 768">
+        <VFrameSet id="VFrameSet0" separatesize="100,*">
+          <Frames>
+            <ChildFrame id="ChildFrame0" style="background:aqua;" showtitlebar="false" formurl="Frame::frmTop.xfdl"/>
+            <HFrameSet id="HFrameSet0" separatesize="200,*">
+              <Frames>
+                <ChildFrame id="ChildFrame0" style="background:antiquewhite;" showtitlebar="false" formurl="Frame::frmLeft.xfdl"/>
+                <FrameSet id="FrameSet0"/>
+              </Frames>
+            </HFrameSet>
+          </Frames>
+        </VFrameSet>
+      </MainFrame>
+    </Layout>
+    <ScreenInfo/>
+  </Application>
+  <Script type="xscript4.0"><![CDATA[
+function gfn_Open(sID, sURL, sTitle)
+{
+	var oFS=application.mainframe.VFrameSet0.HFrameSet0.FrameSet0;
+	var oCF=new ChildFrame(sID, 0, 0, 800, 600);
+	
+	oCF.formurl=sURL;
+	oCF.titletext=sTitle;
+	
+	oFS.addChild(sID, oCF);
+	
+	oCF.show();
+}]]></Script>
+</ADL>

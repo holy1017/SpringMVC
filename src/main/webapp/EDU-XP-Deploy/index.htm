@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE>::: 실행Mode 선택 :::</TITLE>
+<link rel="stylesheet" href="./image/style.css" type="text/css">
+
+<script language="javascript">
+	function fn_Runtime()
+	{
+			window.location = "./XP-Runtime-Install.htm";
+	}
+	
+	function fn_ActiveX()
+	{
+			window.location = "./XP-ActiveX-Install.htm";
+	}
+	
+</script>
+
+</HEAD>
+
+<BODY  style="{ font-size:13 }" >
+
+<table width="800" height="600" bgcolor="gainsboro" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr> 
+        <td width="800" height="600" align="center">
+            <b>*** 실행할 Mode를 선택하세요! ***</b> <br><br>
+            <input type="button" style='width:120px; height:40px; font=bold' value="Runtime" OnClick="fn_Runtime()">
+            <input type="button" style='width:120px; height:40px; font=bold' value="ActiveX" OnClick="fn_ActiveX()">
+        </td>
+    </tr>
+</table>
+
+
+</BODY>
+</HTML>

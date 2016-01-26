@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project active_adl="RIA-Project" version="1.1">
+  <TypeDefinition url="default_typedef.xml"/>
+  <GlobalVariables url="globalvars.xml"/>
+  <ADL id="SDI" url="SDI.xadl"/>
+  <Options positiontype="position2"/>
+  <ADL id="MDI" url="MDI.xadl"/>
+  <ADL id="Widget" url="Widget.xadl"/>
+</Project>

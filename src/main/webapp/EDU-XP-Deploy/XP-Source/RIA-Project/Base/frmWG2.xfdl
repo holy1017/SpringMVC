@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.3">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="frmWG2" classname="frmWG2" inheritanceid="" position="absolute 0 0 1024 768" titletext="New Form" style="background:transparent;border:0 double #ccccccff white;font:arial,11;">
+    <Layout>
+      <Button id="Button00" taborder="0" text="닫기" position2="absolute l:73 w:56 t:124 h:27" positiontype="position2" onclick="Button00_onclick"/>
+    </Layout>
+    <Script type="xscript4.0"><![CDATA[
+function Button00_onclick(obj:Button,  e:ClickEventInfo)
+{
+	Widget1.visible=false;
+}
+]]></Script>
+  </Form>
+</FDL>

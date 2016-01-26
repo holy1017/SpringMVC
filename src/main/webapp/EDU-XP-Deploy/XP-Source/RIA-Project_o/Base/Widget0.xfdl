@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.3">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Widget0" classname="Widget0" inheritanceid="" position="absolute 0 0 1024 768" titletext="New Form" style="background:transparent;">
+    <Layout/>
+  </Form>
+</FDL>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project active_adl="Widget" version="1.1">
+  <TypeDefinition url="default_typedef.xml"/>
+  <GlobalVariables url="globalvars.xml"/>
+  <ADL id="RIA-Project" url="RIA-Project.xadl"/>
+  <Options positiontype="position2"/>
+  <Themes>
+    <RecentlyUsed>
+      <Theme url="MyTheme.xtheme"/>
+      <Theme url="MyTheme.xtheme"/>
+    </RecentlyUsed>
+  </Themes>
+  <ADL id="MDI" url="MDI.xadl"/>
+  <ADL id="Widget" url="Widget.xadl"/>
+</Project>

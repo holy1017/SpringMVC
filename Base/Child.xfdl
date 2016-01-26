@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.4">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Child" classname="Child" inheritanceid="Parent" position="absolute 0 0 1024 768" titletext="New Form" onload="Child_onload">
+    <Layouts>
+      <Layout/>
+    </Layouts>
+    <Script type="xscript4.0"><![CDATA[
+function Child_onload(obj:Form, e:LoadEventInfo)
+{
+	Button02.onclick.setHandler(fn_select);
+}
+
+function fn_select()
+{
+	alert("fn_select");
+}]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.3">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Animation" classname="Animation" inheritanceid="" position="absolute 0 0 1024 768" titletext="New Form">
+    <Layout>
+      <Button id="Button00" taborder="0" text="Action!!!" position2="absolute l:13 w:128 t:13 h:67" positiontype="position2" style="font:Verdana,9,bold;showeffect:ta1;hideeffect:ta1;"/>
+      <Button id="Button01" taborder="1" text="Property" position2="absolute l:311 w:176 t:11 h:41" positiontype="position2" onclick="Button01_onclick"/>
+      <Button id="Button02" taborder="2" text="Transition" position2="absolute l:311 w:179 t:73 h:45" positiontype="position2" onclick="Button02_onclick"/>
+      <Button id="Button03" taborder="3" text="Action!!!" position2="absolute l:13 w:134 t:295 h:65" positiontype="position2" style="font:Verdana,9,bold;moveeffect:ma1;"/>
+      <Button id="Button04" taborder="4" text="Move" position2="absolute l:313 w:177 t:142 h:47" positiontype="position2" onclick="Button04_onclick"/>
+      <Button id="Button05" taborder="5" text="Composite" position2="absolute l:315 w:174 t:217 h:47" positiontype="position2" onclick="Button05_onclick"/>
+    </Layout>
+    <Objects>
+      <PropertyAnimation id="pa1" endingmode="to" repeat="1" repeattype="normal" duration="1000" starttime="0" interpolation="Interpolation.bounceInOut" targetprop="position.width" fromvalue="50" tovalue="300"/>
+      <TransitionAnimation id="ta1" direction="left" duration="2000" starttime="0" interpolation="Interpolation.linear" type="fade"/>
+      <MoveAnimation id="ma1" repeat="1" repeattype="normal" duration="3000" starttime="0" interpolation="Interpolation.bounceOut"/>
+      <CompositeAnimation id="ca1" duration="0" starttime="0"/>
+      <PropertyAnimation id="pa2" endingmode="to" repeat="1" repeattype="normal" duration="1000" starttime="0" interpolation="Interpolation.bounceInOut" targetprop="position.width" fromvalue="50" tovalue="300" targetcomp="Button00"/>
+      <PropertyAnimation id="pa3" endingmode="to" repeat="1" repeattype="normal" duration="1000" starttime="0" interpolation="Interpolation.bounceInOut" targetprop="position.left" fromvalue="10" tovalue="200" targetcomp="Button00"/>
+    </Objects>
+    <Script type="xscript4.0"><![CDATA[
+function Button01_onclick(obj:Button,  e:ClickEventInfo)
+{
+	pa1.run(Button00);
+}
+
+function Button02_onclick(obj:Button,  e:ClickEventInfo)
+{
+	Button00.visible=!(Button00.visible);
+}
+
+function Button04_onclick(obj:Button,  e:ClickEventInfo)
+{
+	Button03.move(400,400,500,500);
+}
+
+function Button05_onclick(obj:Button,  e:ClickEventInfo)
+{
+	ca1.addItem(pa2);
+	ca1.addItem(pa3);
+	ca1.run();
+}
+]]></Script>
+  </Form>
+</FDL>

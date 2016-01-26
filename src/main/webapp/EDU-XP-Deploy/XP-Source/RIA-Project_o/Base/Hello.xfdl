@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.3">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Hello" classname="Hello" inheritanceid="" position="absolute 0 0 1024 768" titletext="New Form">
+    <Layout>
+      <Button id="Button00" taborder="0" text="Hello XPLATFORM!" position2="absolute l:168 w:167 t:109 h:54" positiontype="position2" onclick="Button00_onclick"/>
+    </Layout>
+    <Script type="xscript4.0"><![CDATA[
+function Button00_onclick(obj:Button,  e:ClickEventInfo)
+{
+	alert("Hello!!! XPLATFORM!");
+}
+]]></Script>
+  </Form>
+</FDL>

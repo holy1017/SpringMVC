@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.4">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="EmployeesMLM" classname="EmployeesMLM" inheritanceid="" position="absolute 0 0 800 600" titletext="New Form">
+    <Layouts>
+      <Layout width="800" height="600">
+        <Static id="st_title" text="Employees" position2="absolute l:8 w:215 t:8 h:41" positiontype="position2"/>
+        <Button id="Button00" taborder="1" text="Add" onclick="fn_add" position2="absolute l:374 w:122 t:6 h:45" positiontype="position2"/>
+        <Button id="Button01" taborder="1" text="Delete" onclick="fn_delete" position2="absolute l:496 w:122 t:6 h:45" positiontype="position2"/>
+        <Button id="Button02" taborder="1" text="Retrieve" onclick="fn_Retrieve" position2="absolute l:252 w:122 t:6 h:45" positiontype="position2"/>
+        <Button id="Button03" taborder="1" text="Save" onclick="fn_save" position2="absolute l:618 w:122 t:6 h:45" positiontype="position2"/>
+        <Grid id="Grid00" taborder="1" binddataset="ds_employees" useinputpanel="false" position2="absolute l:17 w:207 t:77 h:493" positiontype="position2">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="83"/>
+                <Column size="108"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+                <Row size="24" band="summ"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="EMPL_ID"/>
+                <Cell col="1" text="NAME"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMPL_ID"/>
+                <Cell col="1" style="color:EXPR(GENDER=='M' ?'blue':'red');" text="bind:FULL_NAME" expr="expr:EMPL_ID+FULL_NAME"/>
+              </Band>
+              <Band id="summary">
+                <Cell/>
+                <Cell col="1"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Div id="Div00" taborder="1" position2="absolute l:252 w:330 t:75 h:379" positiontype="position2" text="Div00">
+          <Layouts>
+            <Layout width="330" height="379">
+              <Static id="Static00" text="FullName" class="val_chk" position2="absolute l:23 w:109 t:26 h:30" positiontype="position2"/>
+              <Static id="Static01" text="Memo" position2="absolute l:23 w:109 t:236 h:30" positiontype="position2"/>
+              <Static id="Static02" text="EmployeeID" onclick="Div00_Static02_onclick" position2="absolute l:23 w:109 t:56 h:30" positiontype="position2"/>
+              <Static id="Static03" text="HireDate" class="val_chk" position2="absolute l:23 w:109 t:86 h:30" positiontype="position2"/>
+              <Static id="Static04" text="Married" class="val_chk" position2="absolute l:23 w:109 t:116 h:30" positiontype="position2"/>
+              <Static id="Static05" text="DeptID" position2="absolute l:23 w:109 t:206 h:30" positiontype="position2"/>
+              <Static id="Static06" text="Salary" class="cal_chk" position2="absolute l:23 w:109 t:146 h:30" positiontype="position2"/>
+              <Static id="Static07" text="Gender" class="val_chk" position2="absolute l:23 w:109 t:176 h:30" positiontype="position2"/>
+              <Edit id="Edit00" taborder="1" position2="absolute l:142 w:152 t:27 h:30" positiontype="position2"/>
+              <MaskEdit id="MaskEdit00" taborder="1" type="string" mask="AA-999" position2="absolute l:142 w:152 t:57 h:30" positiontype="position2"/>
+              <Calendar id="Calendar00" taborder="1" editformat="yyyyMMdd" position2="absolute l:142 w:152 t:87 h:30" positiontype="position2"/>
+              <CheckBox id="CheckBox00" taborder="1" text="CheckBox00" position2="absolute l:142 w:152 t:117 h:30" positiontype="position2"/>
+              <MaskEdit id="MaskEdit01" taborder="1" value="1111" mask="#,###" position2="absolute l:142 w:152 t:147 h:30" positiontype="position2"/>
+              <Radio id="Radio00" taborder="1" columncount="2" rowcount="0" codecolumn="codecolumn" datacolumn="datacolumn" position2="absolute l:142 w:152 t:177 h:30" positiontype="position2">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">W</Col>
+                      <Col id="datacolumn">여자</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">M</Col>
+                      <Col id="datacolumn">남자</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Radio>
+              <Combo id="Combo00" taborder="1" innerdataset="ds_dept" codecolumn="code" datacolumn="text" position2="absolute l:142 w:152 t:207 h:30" positiontype="position2"/>
+              <TextArea id="TextArea00" taborder="1" position2="absolute l:142 w:152 t:237 h:30" positiontype="position2"/>
+            </Layout>
+            <Layout name="SubLayout00" width="324" height="373"/>
+          </Layouts>
+        </Div>
+      </Layout>
+      <Layout name="Android_V" screenid="Screen0" width="480" height="800">
+        <Grid id="Grid00" position2="absolute l:9 w:450 t:109 h:291"/>
+        <Div id="Div00" position2="absolute l:6 w:457 t:416 h:379"/>
+        <Button id="Button00" position2="absolute l:124 w:111 t:48 h:45"/>
+        <Button id="Button01" position2="absolute l:246 w:111 t:48 h:45"/>
+        <Button id="Button02" position2="absolute l:2 w:111 t:48 h:45"/>
+        <Button id="Button03" position2="absolute l:368 w:111 t:48 h:45"/>
+      </Layout>
+      <Layout name="Android_H" screenid="Screen0" width="800" height="480">
+        <Grid id="Grid00" position2="absolute l:17 w:207 t:77 h:377"/>
+      </Layout>
+      <Layout name="iOS_V" screenid="Screen1" width="320" height="480">
+        <Button id="Button00" position2="absolute l:87 w:76 t:10 h:45"/>
+        <Button id="Button01" position2="absolute l:163 w:76 t:10 h:45"/>
+        <Button id="Button02" position2="absolute l:11 w:76 t:10 h:45"/>
+        <Button id="Button03" position2="absolute l:239 w:76 t:10 h:45"/>
+        <Div id="Div00" position2="absolute l:0 w:324 t:203 h:279"/>
+        <Grid id="Grid00" position2="absolute l:0 w:322 t:59 h:140"/>
+      </Layout>
+      <Layout name="iOS_H" width="480" height="320" screenid="Screen1">
+        <Grid id="Grid00" position2="absolute l:1 w:180 t:52 h:268"/>
+        <Div id="Div00" position2="absolute l:173 w:307 t:45 h:275"/>
+        <Button id="Button00" position2="absolute l:123 w:115 t:0 h:45"/>
+        <Button id="Button01" position2="absolute l:245 w:115 t:0 h:45"/>
+        <Button id="Button02" position2="absolute l:1 w:115 t:0 h:45"/>
+        <Button id="Button03" position2="absolute l:367 w:115 t:0 h:45"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.4">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Hello" classname="Hello" inheritanceid="" position="absolute 0 0 800 600" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Button id="Button00" taborder="0" text="HelloTest" position2="absolute l:8 w:134 t:8 h:50" positiontype="position2" onclick="Button00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript4.0"><![CDATA[
+function Button00_onclick(obj:Button,  e:ClickEventInfo)
+{
+	alert("test");
+	
+	if(e.altKey==true){
+		//a
+	}else{
+		//b
+	}
+}
+]]></Script>
+  </Form>
+</FDL>

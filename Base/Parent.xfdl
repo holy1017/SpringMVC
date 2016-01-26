@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.4">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Parent" classname="Parent" inheritanceid="" position="absolute 0 0 800 600" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Button id="Button03" taborder="0" text="Save" onclick="fn_save" position2="absolute l:618 w:122 t:6 h:45" positiontype="position2"/>
+        <Button id="Button01" taborder="1" text="Delete" onclick="fn_delete" position2="absolute l:496 w:122 t:6 h:45" positiontype="position2"/>
+        <Button id="Button00" taborder="1" text="Add" onclick="fn_add" position2="absolute l:374 w:122 t:6 h:45" positiontype="position2"/>
+        <Button id="Button02" taborder="1" text="Retrieve" onclick="fn_Retrieve" position2="absolute l:252 w:122 t:6 h:45" positiontype="position2"/>
+        <Static id="st_title" text="Employees" position2="absolute l:8 w:215 t:8 h:41" positiontype="position2"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

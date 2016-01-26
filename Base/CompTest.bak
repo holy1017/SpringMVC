@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.4">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="CompTest" classname="CompTest" inheritanceid="" position="absolute 0 0 1024 768" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Sign id="Sign00" position2="absolute l:8 w:448 t:8 h:381" positiontype="position2"/>
+        <UserButton1 id="UserButton00" taborder="1" text="UserButton00" position2="absolute l:486 w:242 t:26 h:94" positiontype="position2"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

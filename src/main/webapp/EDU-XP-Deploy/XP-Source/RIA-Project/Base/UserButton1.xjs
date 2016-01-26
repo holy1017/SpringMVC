@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script type="xscript4.0"><![CDATA[class UserButton1 extends Button
+{
+	function OnDraw(Canvas,EventArgs)
+	{
+		var objPainter=Canvas.getPainter();
+		
+		DefaultDraw(objPainter);
+		
+		var objBrush=new Brush;
+		objBrush.setColor(0,255,0,100);
+		objPainter.fillTriangle(objBrush, 0,12,12,12,12,0);
+		
+		return true;
+	
+	}
+}
+]]></Script>
