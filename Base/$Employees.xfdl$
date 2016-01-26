@@ -80,14 +80,14 @@
     <Objects>
       <Dataset id="ds_employees" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false" onload="ds_employees_onload">
         <ColumnInfo>
-          <Column id="EMPL_ID" type="STRING" size="5"/>
+          <Column id="EMPL_ID" type="STRING" size="10"/>
           <Column id="FULL_NAME" type="STRING" size="10"/>
-          <Column id="DEPT_ID" type="STRING" size="2"/>
-          <Column id="HIRE_DATE" type="DATE" size="8"/>
-          <Column id="GENDER" type="STRING" size="1"/>
-          <Column id="MARRIED" type="STRING" size="1"/>
+          <Column id="DEPT_ID" type="STRING" size="100"/>
+          <Column id="HIRE_DATE" type="DATE" size="100"/>
+          <Column id="GENDER" type="STRING" size="10"/>
+          <Column id="MARRIED" type="STRING" size="10"/>
           <Column id="SALARY" type="INT" size="10"/>
-          <Column id="EMPL_MEMO" type="STRING" size="500"/>
+          <Column id="EMPL_MEMO" type="STRING" size="100"/>
         </ColumnInfo>
         <Rows>
           <Row>

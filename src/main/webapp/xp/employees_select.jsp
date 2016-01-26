@@ -10,7 +10,7 @@
 <%@ page contentType="text/xml; charset=UTF-8" %>
 
 <%
-System.out.println("employees_select");
+System.out.println("xplatform");
 // PlatformData 
 PlatformData o_xpData = new PlatformData();
 	
@@ -29,36 +29,32 @@ try {
 		//conn = DriverManager.getConnection("jdbc:sqlserver://61.107.23.159:1433;DatabaseName=EDU;User=edu;Password=edu123");
 		
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-    	conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "scott", "tiger");
+    conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "scott", "tiger");
     
-    	System.out.println("conn "+conn);
-    	
 		stmt = conn.createStatement();
-    	System.out.println("stmt "+stmt);
 	  
 		/******* SQL ************/
 		String SQL="select * from employees"; 
 		
 		rs = stmt.executeQuery(SQL);
-    	System.out.println("rs "+rs.getRow());
 	  
 		/********* Dataset **********/
 		
 		DataSet ds = new DataSet("ds_employees");
 	  
 	  ds.addColumn("EMPL_ID"   ,DataTypes.STRING  ,(short)10   );
-	  ds.addColumn("FULL_NAME" ,DataTypes.STRING  ,(short)50   );
-	  ds.addColumn("HIRE_DATE" ,DataTypes.STRING  ,(short)30   );
-	  ds.addColumn("MARRIED"   ,DataTypes.STRING  ,(short)1    );
+	  ds.addColumn("FULL_NAME" ,DataTypes.STRING  ,(short)10   );
+	  ds.addColumn("HIRE_DATE" ,DataTypes.STRING  ,(short)100   );
+	  ds.addColumn("MARRIED"   ,DataTypes.STRING  ,(short)10    );
 	  ds.addColumn("SALARY"    ,DataTypes.INT     ,(short)10   );
-	  ds.addColumn("GENDER"    ,DataTypes.STRING  ,(short)1    );
-	  ds.addColumn("DEPT_ID"   ,DataTypes.STRING  ,(short)10   );
-	  ds.addColumn("EMPL_MEMO" ,DataTypes.STRING  ,(short)4000 );
+	  ds.addColumn("GENDER"    ,DataTypes.STRING  ,(short)10    );
+	  ds.addColumn("DEPT_ID"   ,DataTypes.STRING  ,(short)100   );
+	  ds.addColumn("EMPL_MEMO" ,DataTypes.STRING  ,(short)100 );
 	  	  
 	  while(rs.next())
 	  {
 	  	int row = ds.newRow();
-	  	System.out.println("row "+row);
+
 	  	ds.set(row ,"EMPL_ID"    ,rs.getString("EMPL_ID")   );
 	  	ds.set(row ,"FULL_NAME"  ,rs.getString("FULL_NAME") );
 	  	ds.set(row ,"HIRE_DATE"  ,rs.getString("HIRE_DATE") );
@@ -67,14 +63,6 @@ try {
 	  	ds.set(row ,"GENDER"     ,rs.getString("GENDER")    );
 	  	ds.set(row ,"DEPT_ID"    ,rs.getString("DEPT_ID")   );
 	  	ds.set(row ,"EMPL_MEMO"  ,rs.getString("EMPL_MEMO") );
-	  	System.out.println(
-	  			rs.getString("EMPL_ID")+"\t"
-	  			+rs.getString("FULL_NAME")+"\t"
-	  			+rs.getString("HIRE_DATE")+"\t"
-	  			+rs.getString("MARRIED") +"\t"
-	  			+rs.getString("SALARY") +"\t"
-	  			+rs.getString("GENDER")+"\t"
-	  			+rs.getString("DEPT_ID") +"\t"+rs.getString("EMPL_MEMO"));
 	  }
 	  	
 		// DataSet-->PlatformData
